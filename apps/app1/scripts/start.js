@@ -19,6 +19,8 @@ const devServerOptions = {
   open: true,
   hot: true,
   compress: true,
+  // friendly error
+  quiet: true,
   stats: {
     colors: true,
   },
