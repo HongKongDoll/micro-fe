@@ -1,12 +1,13 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
 export default (mode) => ({
   mode,
   entry: path.resolve(__dirname, "../src/index.js"),
   output: {
     filename: "app1.bundle.js",
-    path: path.resolve(__dirname, "../public"),
+    path: path.resolve(__dirname, "../build"),
     publicPath: "/",
   },
   module: {
@@ -24,5 +25,6 @@ export default (mode) => ({
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../public/index.html"),
     }),
+    new CleanWebpackPlugin(),
   ],
 });

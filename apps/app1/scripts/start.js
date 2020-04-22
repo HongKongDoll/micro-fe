@@ -15,7 +15,7 @@ const complier = webpack(webpackConfig);
 // https://github.com/webpack/webpack-dev-server/blob/master/examples/api/simple/server.js
 const devServerOptions = {
   ...webpackConfig.devServer,
-  contentBase: path.resolve(__dirname, "../public"),
+  contentBase: path.resolve(__dirname, "../build"),
   open: true,
   hot: true,
   compress: true,
