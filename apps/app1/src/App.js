@@ -6,7 +6,32 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Link to="/app2">To app2</Link>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          <div
+            style={{
+              flexShrink: 0,
+            }}
+          >
+            <div>
+              <Link to="/app1">To app1</Link>
+            </div>
+            <div>
+              <Link to="/app2">To app2</Link>
+            </div>
+          </div>
+          <div
+            id="app2"
+            style={{
+              flexGrow: 1,
+            }}
+          >
+            app1
+          </div>
+        </div>
       </Router>
     );
   }
