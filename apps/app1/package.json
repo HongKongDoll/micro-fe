@@ -9,6 +9,7 @@
   },
   "author": "0x0006e",
   "license": "ISC",
+  "sideEffects": false,
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",

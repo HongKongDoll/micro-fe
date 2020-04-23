@@ -7,4 +7,6 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+export default process.env.NODE_ENV === "development"
+  ? hot(module)(App)
+  : App;

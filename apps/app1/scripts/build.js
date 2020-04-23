@@ -5,9 +5,9 @@ import webpack from "webpack";
 import createConfig from "../config/webpack.config";
 
 const webpackConfig = createConfig(process.env.NODE_ENV);
-const complier = webpack(webpackConfig);
+const compiler = webpack(webpackConfig);
 
-complier.run((err, stats) => {
+compiler.run((err, stats) => {
   // https://webpack.js.org/api/node/#error-handling
   if (err) {
     console.error(err.stack || err);
@@ -17,13 +17,14 @@ complier.run((err, stats) => {
     return;
   }
 
-  const info = stats.toJson();
+  const info = stats.toString({
+    colors: true, // Shows colors in the console
+  });
 
   if (stats.hasErrors()) {
+    console.error(info.error);
     process.exit(1);
   }
 
-  if (stats.hasWarnings()) {
-    console.warn(info.warnings);
-  }
+  console.log(info);
 });
