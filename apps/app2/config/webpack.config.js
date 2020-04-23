@@ -11,7 +11,7 @@ export default (mode) => {
       // Please remove React-Hot-Loader if Fast Refresh is currently supported on your environment.
       // If you need hooks support, use @hot-loader/react-dom
       // hot: "react-hot-loader/patch",
-      app1: path.resolve(__dirname, "../src/index.js"),
+      app2: path.resolve(__dirname, "../src/index.js"),
     },
     output: {
       filename: "[name].js",

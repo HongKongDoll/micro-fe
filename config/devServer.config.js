@@ -13,9 +13,6 @@ const devServerOptions = {
     colors: true,
   },
   historyApiFallback: true,
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-  },
 };
 
 export default devServerOptions;

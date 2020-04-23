@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "yarn wsrun start & babel-node scripts/start.js"
   },
   "author": "0x0006e",
   "license": "ISC",
   "private": true,
   "workspaces": [
     "apps/*"
-  ]
+  ],
+  "dependencies": {
+    "regenerator-runtime": "^0.13.5",
+    "single-spa": "^5.3.4",
+    "wsrun": "^5.2.0"
+  }
 }
