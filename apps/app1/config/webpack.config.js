@@ -17,7 +17,8 @@ export default (mode) => {
       filename: "[name].js",
       path: path.resolve(__dirname, "../build"),
       publicPath: "/",
-      libraryTarget: "amd",
+      library: "app1",
+      libraryTarget: "umd",
     },
     module: {
       rules: [

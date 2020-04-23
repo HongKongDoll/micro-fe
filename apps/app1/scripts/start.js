@@ -4,7 +4,7 @@ import webpack from "webpack";
 import WebpackDevServer from "webpack-dev-server";
 
 import createConfig from "../config/webpack.config";
-import devServerOptions from "../config/devServer.config"
+import devServerOptions from "../config/devServer.config";
 
 const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT || 9001;

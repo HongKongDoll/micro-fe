@@ -14,6 +14,9 @@ export default (mode) => {
       path: path.resolve(__dirname, "../build"),
       publicPath: "/",
     },
+    node: {
+      fs: 'empty'
+    },
     module: {
       rules: [
         {
