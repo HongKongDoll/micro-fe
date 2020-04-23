@@ -7,7 +7,7 @@ export default (mode) => ({
   mode,
   entry: path.resolve(__dirname, "../src/index.js"),
   output: {
-    filename: "app1.bundle.js",
+    filename: "[name].[hash].js",
     path: path.resolve(__dirname, "../build"),
     publicPath: "/",
   },
