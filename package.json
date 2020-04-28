@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn wsrun start & babel-node scripts/start.js"
+    "start": "yarn wsrun start & babel-node scripts/start.js",
+    "build": "yarn wsrun build & babel-node scripts/build.js"
   },
   "author": "0x0006e",
   "license": "ISC",

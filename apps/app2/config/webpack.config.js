@@ -2,6 +2,7 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
+import { name as APP_NAME } from "../package.json";
 
 export default (mode) => {
   return {
@@ -11,14 +12,12 @@ export default (mode) => {
       // Please remove React-Hot-Loader if Fast Refresh is currently supported on your environment.
       // If you need hooks support, use @hot-loader/react-dom
       // hot: "react-hot-loader/patch",
-      app2: path.resolve(__dirname, "../src/index.js"),
+      [APP_NAME]: path.resolve(__dirname, "../src/index.js"),
     },
     output: {
       filename: "[name].js",
       path: path.resolve(__dirname, "../build"),
-      publicPath: "/",
-      library: "app2",
-      libraryTarget: "umd",
+      publicPath: "http://localhost:9002/",
     },
     module: {
       rules: [
